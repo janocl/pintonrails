@@ -1,0 +1,28 @@
+<div class="item">
+  <div class="picture">
+  	<%= link_to image_tag(pint.image, width: 250), pint, title: pint.title %>
+    <div class="item-content">
+    	<div class="informacion">
+    		<div>
+    			<div>
+    				<%= pint.title %> 
+    			</div>
+    			<div>
+    				<%= pint.description %>		
+    			</div>	
+    			<div>
+    				<%= I18n.l pint.created_at, format: :short %>
+    			</div>    			
+    		</div>
+	      	<div>
+	      		<%= link_to 'Show', pint %>
+	        	<%= link_to 'Edit', edit_pint_path(pint) %>
+	        	<%= link_to 'Destroy', pint, method: :delete, data: { confirm: '¿Estás seguro?' } %>
+	        	<%= link_to 'New Pint', new_pint_path %>
+	      	</div>
+
+    	</div>
+    </div>
+  </div>
+
+</div>
