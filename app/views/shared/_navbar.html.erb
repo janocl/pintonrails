@@ -1,4 +1,4 @@
-<nav id="container" class="navbar navbar-default js-masonray" role="navigation">
+<nav id="container" class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -12,6 +12,15 @@
         <li><a href=<%=pints_path%>>All Pints</a></li>
         <li><a href=<%=new_pint_path%>>New Pints</a></li>
       </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="filtrar">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Filtrar" style="border-radius: 5px; height:32px;">
+          </div>
+          <button type="submit" class="btn btn-success" style="border-radius: 5px">Search</button>
+        </div>
+        
+      </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Login</a></li>
         <li><a href="#">SignUp</a></li>

@@ -22,11 +22,12 @@ var ready = function(){
 		$container.imagesLoaded(function(){
 			$container.masonry({
 				itemSelector : '.item',
-				columnWidth : 280,
+				columnWidth :65,
 				isAnimated : true
 			});
 		});
 }
+
 
 $(document).on('ready', ready);
 $(document).on('page:load', ready);

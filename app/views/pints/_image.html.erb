@@ -1,0 +1,18 @@
+<div class="imagen">
+	<div class="thumbnail">
+	<p>
+		<strong>Title:</strong>
+		<%= @pint.title %>
+	</p>
+	<p>
+		<strong>Description:</strong>
+		<%= @pint.description %>
+	</p>
+	</div>
+	<p>
+		<div><strong><%= @pint.title %></strong></div>
+		<%= link_to image_tag(@pint.image, width: 350) %>
+	</p>
+		<%= link_to 'Edit', edit_pint_path(@pint) %> |
+		<%= link_to 'Back', pints_path %>
+</div>

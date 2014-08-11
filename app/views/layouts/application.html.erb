@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Pintonrails</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<title>Pintonrails</title>
   
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
@@ -15,11 +18,10 @@
 
 </head>
 <body>
+	<div class="container-fluid">
 	<!-- llamada a vista parcial: shared/_navbar.html.erb-->
 	<%= render 'shared/navbar' %>
-		<div class="container">	
-			<%= yield %>
-		</div>
-
+		<%= yield %>
+	</div>
 </body>
 </html>
