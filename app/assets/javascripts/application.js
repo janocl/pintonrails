@@ -22,7 +22,7 @@ var ready = function(){
 		$container.imagesLoaded(function(){
 			$container.masonry({
 				itemSelector : '.item',
-				columnWidth :65,
+				columnWidth :63,
 				isAnimated : true
 			});
 		});
