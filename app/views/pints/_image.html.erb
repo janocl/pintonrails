@@ -1,18 +1,18 @@
-<div class="imagen">
-	<div class="thumbnail">
-	<p>
-		<strong>Title:</strong>
-		<%= @pint.title %>
-	</p>
-	<p>
-		<strong>Description:</strong>
-		<%= @pint.description %>
-	</p>
+<div class="imagen thumbnail">
+	<div class="img">
+		<p>
+			<%= @pint.title %>
+			<%= link_to image_tag(@pint.image, :height => "50%", :width => "50%") %>
+		</p>
+			<%= link_to 'Edit', edit_pint_path(@pint) %> |
+			<%= link_to 'Back', pints_path %>
 	</div>
-	<p>
-		<div><strong><%= @pint.title %></strong></div>
-		<%= link_to image_tag(@pint.image, width: 350) %>
-	</p>
-		<%= link_to 'Edit', edit_pint_path(@pint) %> |
-		<%= link_to 'Back', pints_path %>
+
+	<div class="img">
+		<p>
+			<strong>Description:</strong>
+			<%= @pint.description %>
+		</p>
+	</div>
+
 </div>

@@ -14,4 +14,9 @@
  *= require_self
  */
 
-
+.img{
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 48%;
+}
