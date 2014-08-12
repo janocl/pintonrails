@@ -4,8 +4,7 @@ class CreatePints < ActiveRecord::Migration
       t.string :title
       t.string :description
       t.string :image
-      t.string :biography
-
+      
       t.timestamps
     end
   end

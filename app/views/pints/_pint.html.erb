@@ -8,13 +8,13 @@
     	<div class="informacion thumbnail">
     		<div>
     			<div>
-    				<%= pint.title %> 
+    				<span>Personaje: </span><%= pint.title %> 
     			</div>
     			<div>
-    				<%= pint.description %>		
+    				<span>Juego: </span><%= pint.description %>		
     			</div>	
     			<div>
-    				<%= I18n.l pint.created_at, format: :short %>
+    				<span>Upload: </span><%= I18n.l pint.created_at, format: :short %>
     			</div>    			
     		</div>
 	      	<div>
