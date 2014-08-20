@@ -16,18 +16,18 @@
     <%= f.text_field :title, :placeholder => "Nombre..." %>
   </div>
   <div class="field">
-    <%= f.label :description, "Descripción..." %><br>
-    <%= f.text_field :description, :placeholder => "Descripción" %>
+    <%= f.label :description, "Descripción" %><br>
+    <%= f.text_field :description, :placeholder => "Descripción..." %>
   </div>
   <div class="field">
     <%= f.label :image, "Imagen" %><br>
     <%= f.text_field :image, :placeholder => "Link Imagen..." %>
   </div>
   <div class="field">
-    <%= f.label :biography %><br>
+    <%= f.label :biography, "Biografía" %><br>
     <%= f.text_area :biography %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit @pint.new_record? ? "Crear Pint!" : "Actualizar" %>
   </div>
 <% end %>

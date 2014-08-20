@@ -10,6 +10,7 @@ class PintsController < ApplicationController
   # GET /pints/1
   # GET /pints/1.json
   def show
+    @pint = Pint.find(params[:id])
   end
 
   # GET /pints/new
@@ -19,6 +20,7 @@ class PintsController < ApplicationController
 
   # GET /pints/1/edit
   def edit
+    @pint = Pint.find(params[:id])
   end
 
   # POST /pints
@@ -40,15 +42,23 @@ class PintsController < ApplicationController
   # PATCH/PUT /pints/1
   # PATCH/PUT /pints/1.json
   def update
-    respond_to do |format|
-      if @pint.update(pint_params)
-        format.html { redirect_to @pint, notice: 'Pint was successfully updated.' }
-        format.json { render :show, status: :ok, location: @pint }
-      else
-        format.html { render :edit }
-        format.json { render json: @pint.errors, status: :unprocessable_entity }
-      end
+
+    @pint = Pint.find(params[:id])    
+    if @pint.update(params[:pint].permit(:title, :description, :image, :biography))
+        redirect_to @pint
+    else
+      render 'edit'
     end
+
+    # respond_to do |format|
+    #   if @pint.update(pint_params)
+    #     format.html { redirect_to @pint, notice: 'Pint was successfully updated.' }
+    #     format.json { render :show, status: :ok, location: @pint }
+    #   else
+    #     format.html { render :edit }
+    #     format.json { render json: @pint.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # DELETE /pints/1
@@ -69,6 +79,6 @@ class PintsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pint_params
-      params.require(:pint).permit(:title, :description, :image)
+      params.require(:pint).permit(:title, :description, :image, :biography)
     end
 end

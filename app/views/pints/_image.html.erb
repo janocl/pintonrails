@@ -4,8 +4,10 @@
 			<%= @pint.title %>
 			<%= link_to image_tag(@pint.image, :height => "50%", :width => "50%") %>
 		</p>
+		<p>
 			<%= link_to 'Edit', edit_pint_path(@pint) %> |
 			<%= link_to 'Back', pints_path %>
+		</p>
 	</div>
 
 	<div class="img">
@@ -15,7 +17,9 @@
 		</p>
 		<p>
 			<strong>Biografía:</strong>
-			<%= @pint.biography %>
+			<p>
+				<%= @pint.biography %>
+			</p>
 		</p>
 	</div>
 
