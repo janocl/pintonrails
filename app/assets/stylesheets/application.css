@@ -24,3 +24,7 @@
 .tag{
 	margin-bottom: 0px;
 }
+
+.thumbnail .img #biografia{
+	text-align: justify;
+}

@@ -1,7 +1,10 @@
 <div class="imagen thumbnail">
 	<div class="img">
 		<p>
+			<%= @pint.description %>:
 			<%= @pint.title %>
+		</p>
+		<p>
 			<%= link_to image_tag(@pint.image, :height => "50%", :width => "50%") %>
 		</p>
 		<p>
@@ -11,13 +14,10 @@
 	</div>
 
 	<div class="img">
-		<p>
-			<strong>Descripción:</strong>
-			<%= @pint.description %>
-		</p>
+		
 		<p>
 			<strong>Biografía:</strong>
-			<p>
+			<p id="biografia">
 				<%= @pint.biography %>
 			</p>
 		</p>
