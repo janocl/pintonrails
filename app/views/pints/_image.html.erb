@@ -1,26 +1,26 @@
-<div class="imagen thumbnail">
-	<div class="img">
+<div class="imagen">
+	<div class="col-xs-6 thumbnail">
 		<p>
 			<%= @pint.description %>:
 			<%= @pint.title %>
 		</p>
 		<p>
-			<%= link_to image_tag(@pint.image, :height => "50%", :width => "50%") %>
+			<%= link_to image_tag(@pint.image, :height => "50%", :whidth => "50%") %>
 		</p>
-		<p>
+		<div class="crud">
 			<%= link_to 'Edit', edit_pint_path(@pint) %> |
 			<%= link_to 'Back', pints_path %>
-		</p>
+		</div>
 	</div>
 
-	<div class="img">
+	<div class="col-xs-6 thumbnail">
 		
-		<p>
-			<strong>Biografía:</strong>
-			<p id="biografia">
+		<div>
+			<div id="biografia">
+				<strong>Biografía:</strong><br>
 				<%= @pint.biography %>
-			</p>
-		</p>
+			</div>
+		</div>
 	</div>
 
 </div>

@@ -14,20 +14,42 @@
  *= require_self
  */
 body{
-	padding-top: 3em;
-}
-
-.img{
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 48%;
+	padding-top: 5em;
 }
 
 .tag{
 	margin-bottom: 0px;
 }
 
-.thumbnail .img #biografia{
+.crud{
+	text-align: center;
+}
+
+.crud a{
+	color: #F7CA18;
+	text-decoration: none;
+	margin: 0em 0.2em;
+}
+
+a:hover{
+	color: #F89406;
+	text-decoration: none;
+	background: none;
+}
+
+/*_image.html.erb*/
+
+.imagen .thumbnail{
+	padding: 1em 1em;
+	/*margin: 1em 1em;*/
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+}
+
+
+.imagen #biografia{
 	text-align: justify;
+
+	
 }

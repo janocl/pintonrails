@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
   	<title>Pintonrails</title>
-  
+  	
+  	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
 	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -18,9 +19,10 @@
 
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid col-xs-12">
 	<!-- llamada a vista parcial: shared/_navbar.html.erb-->
 	<%= render 'shared/navbar' %>
+
 		<%= yield %>
 	</div>
 </body>

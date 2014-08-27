@@ -17,7 +17,7 @@
     				<span>Upload: </span><%= I18n.l pint.created_at, format: :short %>
     			</div>    			
     		</div>
-	      	<div>
+	      	<div class="crud">
 	      		<%= link_to 'Show', pint %>
 	        	<%= link_to 'Edit', edit_pint_path(pint) %>
 	        	<%= link_to 'Destroy', pint, method: :delete, data: { confirm: '¿Estás seguro?' } %>
