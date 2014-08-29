@@ -1,33 +1,44 @@
-<%= form_for(@pint) do |f| %>
-  <% if @pint.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pint.errors.count, "error") %> prohibited this pint from being saved:</h2>
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="well">   
+      <h1><%= @title %></h1>
 
-      <ul>
-      <% @pint.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <%= form_for(@pint) do |f| %>
+
+        <% if @pint.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@pint.errors.count, "error") %> prohibited this pint from being saved:</h2>
+            <ul>
+            <% @pint.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :title, "Titulo" %>
+          <%= f.text_field :title, :placeholder => "Nombre...", :class => 'form-control' %>
+        </div>
+        <div class="field">
+          <%= f.label :description, "Descripción" %>
+          <%= f.text_field :description, :placeholder => "Descripción...", :class => 'form-control' %>
+        </div>
+        <div class="field">
+          <%= f.label :image, "Imagen" %>
+          <%= f.text_field :image, :placeholder => "Link Imagen...", :class => 'form-control' %>
+        </div>
+        <div class="field">
+          <%= f.label :biography, "Biografía" %>
+          <%= f.text_area :biography, :placeholder => "Biografía...", :class => 'form-control' %>
+        </div>
+        <div class="actions">
+          <%= f.submit @pint.new_record? ? "Crear Pint!" : "Actualizar" %>
+        </div>
+        <div  class="form-group">
+          <%= link_to 'Show', @pint %> | <%= link_to 'Back', pints_path %>
+        </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title, "Titulo" %><br>
-    <%= f.text_field :title, :placeholder => "Nombre..." %>
   </div>
-  <div class="field">
-    <%= f.label :description, "Descripción" %><br>
-    <%= f.text_field :description, :placeholder => "Descripción..." %>
-  </div>
-  <div class="field">
-    <%= f.label :image, "Imagen" %><br>
-    <%= f.text_field :image, :placeholder => "Link Imagen..." %>
-  </div>
-  <div class="field">
-    <%= f.label :biography, "Biografía" %><br>
-    <%= f.text_area :biography %>
-  </div>
-  <div class="actions">
-    <%= f.submit @pint.new_record? ? "Crear Pint!" : "Actualizar" %>
-  </div>
-<% end %>
+</div>  
