@@ -13,8 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+a{
+	color: #F7CA18;
+	text-decoration: none;
+}
+
+.alert{
+	padding-top: 3em;
+	text-align: center;
+	margin: 0px;
+	padding: 1em 0 0 0;
+	font-size: 18px;
+	font-family: arial;
+}
+
 body{
-	padding-top: 5em;
+	padding-top: 3em;
+}
+
+.col-md-6{
+	padding-top: 2em;
 }
 
 .tag{

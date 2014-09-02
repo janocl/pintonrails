@@ -2,16 +2,18 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#" style="font-size:25px">Pint! On Rails</a>
+      <a class="navbar-brand" href=<%= welcome_index_path %> style="font-size:25px">Pint! On Rails</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
       <ul class="nav navbar-nav">
-        <li class="active"><a href=<%=welcome_index_path%>>Home</a></li>
-        <li><a href=<%=pints_path%>>All Pints</a></li>
-        <li><a href=<%=new_pint_path%>>New Pints</a></li>
+        <li class="active"><a href=<%=pints_path%>>Home</a></li>
+        <% if user_signed_in? %>
+          <li><a href=<%=pints_path%>>All Pints</a></li>
+          <li><a href=<%=new_pint_path%>>New Pints</a></li>
+        <% end %>
       </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="filtrar">
@@ -19,13 +21,30 @@
             <input type="text" class="form-control" placeholder="Filtrar" style="border-radius: 5px; height:32px;">
           </div>
           <button type="submit" class="btn btn-success" style="border-radius: 5px">Search</button>
-        </div>
-        
+        </div>      
       </form>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href=<%= new_user_session_path%>>Login</a></li>
-        <li><a href=<%= new_user_registration_path%>>SignUp</a></li>
+        <% if current_user.nil? %>
+          <li><a href=<%= new_user_session_path%>>Login</a></li>
+          <li><a href=<%= new_user_registration_path%>>SignUp</a></li>
+        <% else %>
+          <li class="dropdown">
+            
+ 
+                <% if user_signed_in? %>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.email %><span class="caret"></span></a>
+                <% end %>
+
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li class="divider"></li>
+                <li><a href=<%= destroy_user_session_path %> data-method="delete">Logout</a></li>
+              </ul>
+            
+          </li>
+        <% end %>
       </ul>
       
     </div><!-- /.navbar-collapse -->

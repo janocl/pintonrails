@@ -33,7 +33,7 @@
           <%= f.text_area :biography, :placeholder => "Biografía...", :class => 'form-control' %>
         </div>
         <div class="actions">
-          <%= f.submit @pint.new_record? ? "Crear Pint!" : "Actualizar" %>
+          <%= f.submit @pint.new_record? ? "Crear Pint!" : "Actualizar", :class => 'form-control' %>
         </div>
         <div  class="form-group">
           <%= link_to 'Show', @pint %> | <%= link_to 'Back', pints_path %>

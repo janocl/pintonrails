@@ -1,5 +1,6 @@
 class PintsController < ApplicationController
   before_action :set_pint, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except:[:show]
 
   # GET /pints
   # GET /pints.json

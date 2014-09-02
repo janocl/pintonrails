@@ -32,3 +32,7 @@ var ready = function(){
 
 $(document).on('ready', ready);
 $(document).on('page:load', ready);
+
+$('#alerta').on('closed.bs.alert', function () {
+,	$(".alert").alert('close');
+})

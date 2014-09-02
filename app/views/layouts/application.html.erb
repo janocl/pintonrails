@@ -22,8 +22,8 @@
 	<div class="container-fluid">
 	<!-- llamada a vista parcial: shared/_navbar.html.erb-->
 	<%= render 'shared/navbar' %>
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
+	<p id="alerta"class="notice alert close" data-dismiss="alert"><%= notice %></p>
+	<!-- <p class="alert"><%= alert %></p> -->
 		<%= yield %>
 	</div>
 </body>
