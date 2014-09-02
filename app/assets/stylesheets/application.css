@@ -20,11 +20,10 @@ a{
 }
 
 .alert{
-	padding-top: 3em;
 	text-align: center;
 	margin: 0px;
-	padding: 1em 0 0 0;
-	font-size: 18px;
+	padding: 0px;
+	font-size: 16px;
 	font-family: arial;
 }
 
@@ -33,7 +32,7 @@ body{
 }
 
 .col-md-6{
-	padding-top: 2em;
+	padding-top: 3em;
 }
 
 .tag{
@@ -60,7 +59,7 @@ a:hover{
 
 .imagen .thumbnail{
 	padding: 1em 1em;
-	/*margin: 1em 1em;*/
+	margin-top: 2em;
 	display: inline-block;
 	text-align: center;
 	vertical-align: top;
@@ -71,4 +70,11 @@ a:hover{
 	text-align: justify;
 
 	
+}
+.form-control{
+	border-radius: 5px;
+}
+
+.well{
+	border-radius: 7px;
 }
